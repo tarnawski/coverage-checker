@@ -1,0 +1,24 @@
+name: Continuous integration
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: composer install --prefer-dist
+      - name: PHP CodeSniffer. Detect coding standard violations.
+        run: php vendor/bin/phpcs
+      - name: PHPStan. Find errors in your code without actually running it.
+        run: php vendor/bin/phpstan analyse
+      - name: PHPUnit. Run unit tests and generate code coverage metrics.
+        run: php vendor/bin/phpunit --coverage-clover coverage.xml
+      - name: Coverage Checker. Print code coverage value.
+        run: php bin/coverage-printer coverage.xml
+      - name: Coverage Checker. Check that the code coverage meets the expected value.
+        run: php bin/coverage-checker coverage.xml 100
