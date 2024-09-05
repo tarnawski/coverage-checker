@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1725511201">
+  <project timestamp="1725511201">
+    <package name="CoverageChecker">
+      <file name="/app/src/Checker.php">
+        <class name="CoverageChecker\Checker" namespace="CoverageChecker">
+          <metrics complexity="10" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="15" elements="22" coveredelements="17"/>
+        </class>
+        <metrics loc="62" ncloc="61" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="15" elements="22" coveredelements="17"/>
+      </file>
+    </package>
+    <file name="/app/src/CheckerInterface.php">
+      <metrics loc="10" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <metrics files="2" loc="72" ncloc="71" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="15" elements="22" coveredelements="17"/>
+  </project>
+</coverage>
